@@ -1,0 +1,3 @@
+hello $$ <i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+hola $$ <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+my name $$ <i class="fa fa-address-book" aria-hidden="true"></i>
