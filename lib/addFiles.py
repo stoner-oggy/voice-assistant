@@ -1,7 +1,7 @@
-import selectFile
+from . import selectFile
 import datetime
-import getQuery
-import tts
+from . import Query
+from . import tts
 
 """ use add app to add application which is accessable by your voice assistance"""
 
@@ -21,9 +21,9 @@ def addToDoNotes():
         date = str(datetime.datetime.now()).split(" ")[0]
         while(True):
                 tts.tts("what is the title of the ToDo Note ?")
-                title = getQuery.getQuery()
+                title = Query.getQuery()
                 tts.tts('is title final')
-                flag = getQuery.getQuery()
+                flag = Query.getQuery()
                 if(flag == 'yes'):
                         tts.tts("please input the description..")
                         desc = input('write your description here')

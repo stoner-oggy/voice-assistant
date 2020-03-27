@@ -1,6 +1,10 @@
-from playsound import playsound
-from bin import Query
 import sys
+from playsound import playsound
+
+from lib import Query
+# from lib import Query
+import sys
+
 def main():
     while(True):
         sys.stdout.flush()

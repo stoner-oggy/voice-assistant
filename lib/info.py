@@ -1,4 +1,4 @@
-import tts
+from . import tts
 import datetime
 from playsound import playsound
 
@@ -11,4 +11,7 @@ def date():
     playsound('./Data/audio/today_Date.mp3')
     tts.tts(current)
 
-date()
+def time():
+    time =  (str(datetime.datetime.now()).split(" ")[1])
+    print(time)
+    tts.tts("time is :"+str(time))

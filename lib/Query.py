@@ -1,6 +1,9 @@
 import speech_recognition as sr
-# creating an object of recognizer
+from . import search 
+from . import info
 
+
+# creating an object of recognizer
 recognizer = sr.Recognizer()
 
 def getQuery():
@@ -20,7 +23,11 @@ def waitForCall():
         return False
 
 def handleQuery(string):
-    print(string)
+    if('search' in string):
+        search.search(string.split("search")[1])
+    elif('today' in string and 'date' in string):
+        info.date()
+    elif('time' in string and 'what' in string):
+        info.time()
 
 
-    
