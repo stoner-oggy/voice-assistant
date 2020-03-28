@@ -8,4 +8,4 @@ def tts(string):
     file = './Data/audio.mp3'
     audio.save(file)
     playsound(file,True)
-tts("todays date is :")
+tts("i didn't understand that")
