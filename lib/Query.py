@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from . import search 
 from . import info
+from playsound import playsound
 
 
 # creating an object of recognizer
@@ -27,7 +28,11 @@ def handleQuery(string):
         search.search(string.split("search")[1])
     elif('today' in string and 'date' in string):
         info.date()
-    elif('time' in string and 'what' in string):
+    elif('time' in string and 'now' in string):
         info.time()
+    elif("who are you" in string ):
+        info.intro()
+    else:
+        playsound('./Data/audio/unrecognized.mp3')
 
 
