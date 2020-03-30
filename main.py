@@ -1,20 +1,22 @@
 import sys
 from playsound import playsound
+from lib import addFiles
 
 from lib import Query
 # from lib import Query
 import sys
 
 def main():
-    while(True):
-        sys.stdout.flush()
-        flag  = input("enter start or exit\n")
-        if(flag=='exit'):
-            break
-        playsound('./Data/audio/welcomeGreeting.mp3')
+    addFiles.showApps()
+    # while(True):
+    #     sys.stdout.flush()
+    #     flag  = input("enter start or exit\n")
+    #     if(flag=='exit'):
+    #         break
+    #     playsound('./Data/audio/welcomeGreeting.mp3')
 
-        query = Query.getQuery()
-        Query.handleQuery(query)
+    #     query = Query.getQuery()
+    #     Query.handleQuery(query)
         
 
 if __name__ == "__main__":
