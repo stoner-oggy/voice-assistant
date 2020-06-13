@@ -7,18 +7,19 @@ from lib import Query
 import sys
 
 def main():
-    addFiles.showApps()
-    # while(True):
-    #     sys.stdout.flush()
-    #     flag  = input("enter start or exit\n")
-    #     if(flag=='exit'):
-    #         break
-    #     playsound('./Data/audio/welcomeGreeting.mp3')
-
-    #     query = Query.getQuery()
-    #     Query.handleQuery(query)
+    while(True):
+        sys.stdout.flush()
+        flag  = input("enter start or exit\n")
+        if(flag=='exit'):
+            break
+        playsound('./Data/audio/welcomeGreeting.mp3')
+        try:
+            query = Query.getQuery()
+        except:
+            print("ERROR : Seems like you are offline")
         
-
+        Query.handleQuery(query)
+        
 if __name__ == "__main__":
     main()
 
