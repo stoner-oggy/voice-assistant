@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.16299.0",
+            "compilerPath": "C:/TDM-GCC-64/bin/g++.exe",
+            "intelliSenseMode": "gcc-x64",
+            "includePath": [
+                "${default}",
+                "C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/bits"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "forcedInclude": [
+                "C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/5.1.0/include/c++/bits/stdc++.h"
+            ],
+            "browse": {
+                "path": []
+            }
+        }
+    ],
+    "version": 4
+}

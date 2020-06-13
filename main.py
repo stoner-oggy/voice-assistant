@@ -1,5 +1,6 @@
 import sys
 from playsound import playsound
+from lib import addFiles
 
 from lib import Query
 # from lib import Query
@@ -12,11 +13,13 @@ def main():
         if(flag=='exit'):
             break
         playsound('./Data/audio/welcomeGreeting.mp3')
-
-        query = Query.getQuery()
+        try:
+            query = Query.getQuery()
+        except:
+            print("ERROR : Seems like you are offline")
+        
         Query.handleQuery(query)
         
-
 if __name__ == "__main__":
     main()
 

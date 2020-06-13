@@ -2,6 +2,8 @@ import speech_recognition as sr
 from . import search 
 from . import info
 from playsound import playsound
+from . import addFiles
+import re
 
 
 # creating an object of recognizer
@@ -32,6 +34,8 @@ def handleQuery(string):
         info.time()
     elif("who are you" in string ):
         info.intro()
+    elif('add' in string or 'display' in string):
+        addFiles.handleFiles(string)
     else:
         playsound('./Data/audio/unrecognized.mp3')
 
